@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>J✿yful Charms</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <style>
+
+        /* =========================
+           DASAR
+        ========================= */
+
+        body {
+            margin: 0;
+            background-color: #fff7f1;
+            color: #694f59;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'DM Serif Display', serif;
+        }
+
+        .container {
+            max-width: 1100px;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+            background-color: #fffaf5;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-family: 'DM Serif Display', serif;
+            font-size: 26px;
+            color: #c85f87 !important;
+        }
+
+        .nav-link {
+            color: #694f59 !important;
+            margin-left: 15px;
+            font-size: 14px;
+        }
+
+        .nav-link:hover {
+            color: #d96896 !important;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            background-color: #dceef2;
+            padding: 90px 0;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            color: #76505f;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        .small-title {
+            color: #c85f87;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        /* FRAME FOTO UTAMA */
+
+        .hero-image {
+            width: 330px;
+            height: 330px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 12px solid white;
+            box-shadow: 0 8px 25px rgba(100, 70, 80, 0.12);
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .btn-primary {
+            background-color: #d96896;
+            border-color: #d96896;
+            border-radius: 30px;
+            padding: 11px 28px;
+        }
+
+        .btn-primary:hover {
+            background-color: #bd537c;
+            border-color: #bd537c;
+        }
+
+
+        /* =========================
+           PRODUK
+        ========================= */
+
+        .products {
+            padding: 80px 0;
+            background-color: #fff7e9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: #76505f;
+        }
+
+        .section-title p {
+            color: #8b737b;
+        }
+
+
+        /* =========================
+           CARD PRODUK / FRAME
+        ========================= */
+
+        .product-card {
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 7px 20px rgba(100, 70, 80, 0.10);
+            height: 100%;
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(100, 70, 80, 0.15);
+        }
+
+        /* FRAME FOTO PRODUK */
+
+        .product-card img {
+            display: block;
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-card .card-body {
+            padding: 25px;
+        }
+
+        .product-card h5 {
+            color: #c85f87;
+            font-size: 22px;
+        }
+
+        .price {
+            color: #76505f;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           CHECKERBOARD
+        ========================= */
+
+        .checker {
+            background-color: #f3a6c5;
+
+            background-image:
+                linear-gradient(
+                    45deg,
+                    #f8c8dc 25%,
+                    transparent 25%
+                ),
+                linear-gradient(
+                    -45deg,
+                    #f8c8dc 25%,
+                    transparent 25%
+                ),
+                linear-gradient(
+                    45deg,
+                    transparent 75%,
+                    #f8c8dc 75%
+                ),
+                linear-gradient(
+                    -45deg,
+                    transparent 75%,
+                    #f8c8dc 75%
+                );
+
+            background-size: 45px 45px;
+
+            background-position:
+                0 0,
+                0 22px,
+                22px -22px,
+                -22px 0;
+        }
+
+        .checker-section {
+            padding: 75px 0;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            padding: 80px 0;
+            background-color: #fffaf2;
+        }
+
+        /* FRAME FOTO ABOUT */
+
+        .about-img {
+            width: 100%;
+            max-width: 450px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 25px;
+            border: 10px solid white;
+            box-shadow: 0 8px 25px rgba(100, 70, 80, 0.10);
+        }
+
+        .about h2 {
+            font-size: 42px;
+            color: #76505f;
+        }
+
+        .about p {
+            line-height: 1.9;
+        }
+
+
+        /* =========================
+           KONTAK
+        ========================= */
+
+        .contact {
+            padding: 80px 0;
+            background-color: #dceef2;
+        }
+
+        .contact-box {
+            background-color: #fffaf5;
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(80, 60, 70, 0.08);
+        }
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        .form-control {
+            border: 1px solid #ead5dc;
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            border-color: #d96896;
+            box-shadow: 0 0 0 0.15rem rgba(217, 104, 150, 0.15);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background-color: #d96896;
+            color: white;
+            text-align: center;
+            padding: 25px 0;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero-image {
+                width: 280px;
+                height: 280px;
+            }
+
+        }
+
+
+        /* =========================
+           HP
+        ========================= */
+
+        @media (max-width: 767px) {
+
+            .hero {
+                text-align: center;
+                padding: 60px 0;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-image {
+                width: 230px;
+                height: 230px;
+                margin-top: 35px;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+            .about {
+                text-align: center;
+            }
+
+            .about-img {
+                margin-bottom: 30px;
+                height: 280px;
+            }
+
+            .contact {
+                padding: 55px 0;
+            }
+
+        }
+
+
+        /* =========================
+           MONITOR BESAR
+        ========================= */
+
+        @media (min-width: 1400px) {
+
+            .container {
+                max-width: 1200px;
+            }
+
+            .hero {
+                padding: 120px 0;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="#">
+                J✿yful Charms
+            </a>
+
+            <!-- Tombol Navbar HP -->
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Menu Navbar -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            Beranda
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produk">
+                            Produk
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">
+                            Tentang
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">
+                            Kontak
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section id="home" class="hero">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6">
+
+                    <p class="small-title">
+                        HANDMADE ACCESSORIES
+                    </p>
+
+                    <h1>
+                        Little things,
+                        big sparkle ✿
+                    </h1>
+
+                    <p class="mt-3">
+                        Temukan berbagai accessories lucu
+                        dan manis untuk melengkapi gaya
+                        sehari-hari kamu.
+                    </p>
+
+                    <a
+                        href="#produk"
+                        class="btn btn-primary mt-2">
+
+                        Lihat Produk
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-md-6 text-center">
+
+                    <!-- FOTO UTAMA -->
+                    <img
+                        src="images/utama.jpg"
+                        alt="Accessories Lunéa"
+                        class="hero-image">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUK
+         LATIHAN 3
+    ========================= -->
+
+    <section id="produk" class="products">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <p class="small-title">
+                    OUR COLLECTION
+                </p>
+
+                <h2>
+                    What We Have ✿
+                </h2>
+
+                <p>
+                    Pilih accessories favoritmu.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- PRODUK 1 -->
+
+                <div class="col-md-4">
+
+                    <div class="card product-card">
+
+                        <img
+                            src="images/kalung.jpg"
+                            alt="Kalung">
+
+                        <div class="card-body">
+
+                            <h5>
+                                Pretty Necklace
+                            </h5>
+
+                            <p>
+                                Kalung gemas untuk menyempurnakan outfit kamu.
+                            </p>
+
+                            <p class="price">
+                                Rp35.000
+                            </p>
+
+                            <a
+                                href="#kontak"
+                                class="btn btn-primary pesan-produk"
+                                data-produk="Pretty Necklace">
+
+                                Pesan Sekarang
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUK 2 -->
+
+                <div class="col-md-4">
+
+                    <div class="card product-card">
+
+                        <img
+                            src="images/gelang.jpg"
+                            alt="Gelang">
+
+                        <div class="card-body">
+
+                            <h5>
+                                Lovely Bracelet
+                            </h5>
+
+                            <p>
+                               Gelang manis untuk mempercantik outfit gemes kamu.
+                            </p>
+
+                            <p class="price">
+                                Rp25.000
+                            </p>
+
+                            <a
+                                href="#kontak"
+                                class="btn btn-primary pesan-produk"
+                                data-produk="Lovely Bracelet">
+
+                                Pesan Sekarang
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUK 3 -->
+
+                <div class="col-md-4">
+
+                    <div class="card product-card">
+
+                        <img
+                            src="images/keychain.jpg"
+                            alt="Keychain">
+
+                        <div class="card-body">
+
+                            <h5>
+                                Chic Keychain
+                            </h5>
+
+                            <p>
+                                Gantungan Kunci/Tas yang akan membuat penampilan kamu semakin Chic!
+                            </p>
+
+                            <p class="price">
+                                Rp28.000
+                            </p>
+
+                            <a
+                                href="#kontak"
+                                class="btn btn-primary pesan-produk"
+                                data-produk="Chic Keychain">
+
+                                Pesan Sekarang
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHECKERBOARD
+    ========================= -->
+
+    <section class="checker checker-section">
+
+        <div class="container">
+
+            <div class="text-center text-white">
+
+                <p class="small-title text-white">
+                    J✿yful Charms
+                </p>
+
+                <h2 class="display-5">
+                    Accessories made
+                    with love ✨
+                </h2>
+
+                <p class="mt-3">
+                    Simple, cute, and made to complete
+                    your everyday look.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section id="tentang" class="about">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center">
+
+                    <!-- FOTO ABOUT -->
+                    <img
+                        src="images/about.jpg"
+                        alt="About Lunéa"
+                        class="about-img">
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <p class="small-title">
+                        A J✿yful Charms
+                    </p>
+
+                    <h2>
+                        Made with love ♥︎
+                    </h2>
+
+                    <p>
+                        J✿yful Charms menghadirkan berbagai
+                        accessories dengan desain yang
+                        feminin, playful, dan mudah
+                        dipadukan dengan outfit sehari-hari.
+                    </p>
+
+                    <p>
+                        Karena kami percaya bahwa detail
+                        kecil dapat membuat penampilan
+                        menjadi lebih spesial.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Kontak -->
+
+    <section id="kontak" class="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <p class="small-title">
+                    GET IN TOUCH
+                </p>
+
+                <h2>
+                    Contact Us
+                </h2>
+
+                <p>
+                    Punya pertanyaan?
+                    Kirim pesan kepada kami.
+                </p>
+
+            </div>
+
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-7">
+
+                    <div class="contact-box">
+
+                        <form id="formKontak">
+
+                            <!-- NAMA -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="nama"
+                                    class="form-label">
+
+                                    Nama
+
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nama"
+                                    class="form-control"
+                                    placeholder="Masukkan nama">
+
+                            </div>
+
+
+                            <!-- EMAIL -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="email"
+                                    class="form-label">
+
+                                    Email
+
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="Masukkan email">
+
+                            </div>
+
+
+                            <!-- PESAN -->
+
+                            <div class="mb-3">
+
+                                <label
+                                    for="pesan"
+                                    class="form-label">
+
+                                    Pesan
+
+                                </label>
+
+                                <textarea
+                                    id="pesan"
+                                    class="form-control"
+                                    rows="5"
+                                    placeholder="Tulis pesan Anda"></textarea>
+
+                            </div>
+
+
+                            <!-- TOMBOL KIRIM -->
+
+                            <button
+                                type="button"
+                                class="btn btn-primary"
+                                id="tombolKirim">
+
+                                Kirim Pesan
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MODAL KONFIRMASI
+         LATIHAN 5
+    ========================= -->
+
+    <div
+        class="modal fade"
+        id="modalKonfirmasi"
+        tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Konfirmasi Pesan
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+
+                <div class="modal-body">
+
+                    Apakah Anda yakin ingin mengirim pesan ini?
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Batal
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="yaKirim">
+
+                        Ya, Kirim
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p class="mb-0">
+                J✿yful Charms — Made with Love ♥︎
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        /* =========================
+           PRODUK → FORM KONTAK
+        ========================= */
+
+        const tombolProduk =
+            document.querySelectorAll(".pesan-produk");
+
+        const pesan =
+            document.getElementById("pesan");
+
+
+        tombolProduk.forEach(function(tombol) {
+
+            tombol.addEventListener("click", function() {
+
+                const produk =
+                    this.getAttribute("data-produk");
+
+                pesan.value =
+                    "Halo, saya tertarik dengan " +
+                    produk +
+                    ". Saya ingin mengetahui informasi lebih lanjut.";
+
+            });
+
+        });
+
+
+        /* =========================
+           TOMBOL KIRIM
+        ========================= */
+
+        const tombolKirim =
+            document.getElementById("tombolKirim");
+
+        tombolKirim.addEventListener("click", function() {
+
+            const nama =
+                document.getElementById("nama").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const isiPesan =
+                document.getElementById("pesan").value.trim();
+
+
+            /* CEK FORM */
+
+            if (
+                nama === "" ||
+                email === "" ||
+                isiPesan === ""
+            ) {
+
+                Swal.fire({
+
+                    title: "Form belum lengkap ✿",
+
+                    text: "Silakan isi Nama, Email, dan Pesan terlebih dahulu.",
+
+                    icon: "warning",
+
+                    confirmButtonText: "Oke"
+
+                });
+
+                return;
+
+            }
+
+
+            /* BUKA MODAL */
+
+            const modal =
+                new bootstrap.Modal(
+                    document.getElementById("modalKonfirmasi")
+                );
+
+            modal.show();
+
+        });
+
+
+        /* =========================
+           YA, KIRIM
+        ========================= */
+
+        document
+            .getElementById("yaKirim")
+            .addEventListener("click", function() {
+
+                /* TUTUP MODAL */
+
+                const modalElement =
+                    document.getElementById("modalKonfirmasi");
+
+                const modal =
+                    bootstrap.Modal.getInstance(modalElement);
+
+                modal.hide();
+
+
+                /* SWEETALERT */
+
+                Swal.fire({
+
+                    title: "Pesan Terkirim! ✿",
+
+                    text: "Terima kasih sudah menghubungi Lunéa Accessories.",
+
+                    icon: "success",
+
+                    confirmButtonText: "Oke",
+
+                    confirmButtonColor: "#d96896"
+
+                });
+
+
+                /* KOSONGKAN FORM */
+
+                document
+                    .getElementById("formKontak")
+                    .reset();
+
+            });
+
+    </script>
+
+</body>
+</html>
